@@ -1,20 +1,20 @@
 <?php
 require_once('geoplugin.class.php');
 
-$geoplugin = new geoPlugin();
+    $geoplugin = new geoPlugin();
 
-$geoplugin->locate();
+    $geoplugin->locate();
 
-	echo "Geolocation results for {$geoplugin->ip}: <br />\n".
-	"City: {$geoplugin->city} <br />\n".
-	"Region: {$geoplugin->region} <br />\n".
-	"Region Code: {$geoplugin->regionCode} <br />\n".
-	"Region Name: {$geoplugin->regionName} <br />\n".
-	"Country Name: {$geoplugin->countryName} <br />\n".
-	"Country Code: {$geoplugin->countryCode} <br />\n".
-	"Latitude: {$geoplugin->latitude} <br />\n".
-	"Longitude: {$geoplugin->longitude} <br />\n".
-	"Timezone: {$geoplugin->timezone} <br />\n";
+        $_SESSION['geoplugin_ip']                =           $geoplugin->ip;
+        $_SESSION['geoplugin_city']              =           $geoplugin->city;
+        $_SESSION['geoplugin_region']            =           $geoplugin->region;
+        $_SESSION['geoplugin_regionName']        =           $geoplugin->regionName;
+        $_SESSION['geoplugin_countryName']       =           $geoplugin->countryName;
+        $_SESSION['geoplugin_countryCode']       =           $geoplugin->countryCode;
+        $_SESSION['geoplugin_latitude']          =           $geoplugin->latitude;
+        $_SESSION['geoplugin_longitude']         =           $geoplugin->longitude;
+        $_SESSION['geoplugin_timezone']          =           $geoplugin->timezone;
+
 ?>
 
 <!DOCTYPE html>
