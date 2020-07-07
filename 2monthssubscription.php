@@ -25,6 +25,11 @@ $user_id=$_SESSION['user_info_id'];
 
 </section>
 
+<script>
 
+    function toggleNav(){
+      document.querySelector(".holla").classList.toggle("navbar--open");
+    }
+</script>
 </body>
 </html>

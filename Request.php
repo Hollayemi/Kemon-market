@@ -19,7 +19,7 @@ $mysqli=mysqli_connect('localhost','root','','market');
 
                     <h2 style="color:black;">Search</h2>
                     <div class="inputs">
-                      <input type="text" name="Search_City" value="" placeholder="search"  style="padding:10px;" required>  
+                      <input type="search" name="Search_City" value="" placeholder="search"  style="padding:10px;" required>  
                
                    </div>
 <br>
@@ -109,8 +109,7 @@ mysqli_close($mysqli)
 
 
 
-    <?php
-
+<?php
     for($t= date("s"); $t <=52; $t++){
         echo "<img src='pic/f".$t.".jpg' alt'Advert' width='60%' height='650' style=margin-left:20%;";
         echo $t;
@@ -121,8 +120,6 @@ mysqli_close($mysqli)
         ?>
       <br><br><br>
       <!-- <h5 style="margin-left:10%;">for more of your ankara styles, visit <?php header("location:Register.php")?>Awesome-wears </a> for more information</h5> -->
-
-
 <footer id="all_footer" style="background-color:#4CAF50 !important; ">
 <div class="About_me cent">
             
@@ -157,6 +154,13 @@ mysqli_close($mysqli)
 
 
 <script>
+
+    function toggleNav(){
+      document.querySelector(".holla").classList.toggle("navbar--open");
+    }
+</script>
+<script>
+
 var x = document.getElementById("Registration_all");
 
 function getLocation() {
