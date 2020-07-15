@@ -1,4 +1,5 @@
 <?php
+include('regNav.php');
 include('header.php');
 $_SESSION['message']="";
 $mysqli=mysqli_connect('localhost','root','','market');
@@ -7,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
 		$Shop_Name     =  $mysqli->real_escape_string($_POST['Shop_Name']);
 		$Junction      =  $mysqli->real_escape_string($_POST['Junction']);
     $Bustop        =  $mysqli->real_escape_string($_POST['Bustop']);
-    //$City          =  $mysqli->real_escape_string($_POST['Shop_City']);
+    $City          =  $mysqli->real_escape_string($_POST['Shop_City']);
     $Shop_Line     =  $mysqli->real_escape_string($_POST['Shop_Line']);
     $Desc          =  $mysqli->real_escape_string($_POST['Desc']);
     $real_id       =  $_SESSION['user_info_id'];
@@ -16,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
     $_SESSION['shop_line']='$Shop_Line';
 		$_SESSION['Email']='Email';
 
-		$sql="UPDATE users SET shop_name='$Shop_Name',bustop='$Bustop',junction='$Junction',shop_line='$Shop_Line',more='$Desc' WHERE id='$real_id'";
+		$sql="UPDATE users SET shop_name='$Shop_Name',bustop='$Bustop',junction='$Junction',shop_line='$Shop_Line',more='$Desc',City='$City' WHERE id='$real_id'";
 
         $run=mysqli_query($mysqli,$sql);
         if($run){
@@ -36,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
 			}
 	mysqli_close($mysqli)
 ?>
+
  <div class="reg_btn">
     <a href="Request.php"><span>Shop</span></a>
   </div>
@@ -48,10 +50,9 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
 			<div >
 				
 				<form method="POST" autocomplete="off">
-            <fieldset class="display_forms">
                     <?php 
                     ?>
-                    <h2 style="color:black;">Shop Details</h2>
+                    <h2 style="color:black;">Company Details</h2>
                     <div class="inputs">
                       <input type="text" name="Shop_Name" value="" placeholder="Shop's Name" style="padding:10px;" required> 
                     </div><br>
@@ -64,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
                     </div><br>
 
                     <div class="inputs">
-                      <input type="text" name="Shop_City" value="" placeholder="City" style="padding:10px;" required> 
+                      <input type="text" name="Shop_City" value="" placeholder="Location" style="padding:10px;" required> 
                     </div><br>
                 
                     <div class="inputs">
@@ -74,11 +75,22 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
              <div class="inputs">
                       <textarea name="Desc" id="Desc" cols="50" rows="5" placeholder="What offer do you render" required></textarea>
                     </div><br>
+         <div class="inputs">
+              <h6 style="color:#000 !important;">(optional)</h6>    
+        </div>                
+
+        
+            <input type="checkbox" name="vehicle1" value="Bike"><h6 style="color:#000 !important;">Use my current location</h6>
+            <input type="checkbox" name="vehicle2" value="Car"><h6 style="color:#000 !important;">I have a car </h6>
+        </div>
+
+        <div>
+
+        </div>
 
               <div class="login_button Create_Acc" style="margin-bottom:75px; border-radius:10px">
               <input type="submit" value="Register">
               </div>
-            </fieldset>
 				</form>
       </div>
 
@@ -164,8 +176,16 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
 
   </div>
 
-
     <!-- Scripts -->
+
+    
+
+
+  <script>
+    function toggleNav(){
+      document.querySelector(".holla").classList.toggle("navbar--open");
+    }
+  </script>
 
   <script>     
         const paymentForm = document.getElementById('paymentForm');
