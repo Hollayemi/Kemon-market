@@ -45,7 +45,7 @@
 	color:rgb(104, 101, 101);
 }
 .anchors ul{
-	display:none;
+	display:block;
 }
 .anchors li:hover .subscription{
 	display:block;
@@ -54,6 +54,23 @@
 	transition:top 0.6s ease-in-out;
 	border-radius:10px;
 }
+.anchors a:hover .subscription{
+	display:block;
+	background-color:#05a1c9;
+	position: absolute;
+	transition:top 0.6s ease-in-out;
+	border-radius:10px;
+}
+
+.anchors li:hover .contact{
+	display:block;
+	background-color:#05a1c9;
+	position: absolute;
+	transition:top 0.6s ease-in-out;
+	border-radius:10px;
+}
+
+
 .subscription{
 	transition:top 0.6s ease-in-out;
 }
@@ -73,8 +90,13 @@
 		z-index:2;
 	}
 	.anchors li:hover{
-		border-bottom:3px solid #ccc;
-	
+		border-bottom:3px solid #ccc;	
+	}
+	.anchors li a:hover{
+		color: #ccc;
+	}
+	.subscription a{
+		font-size:15px;
 	}
 
 	.holla{

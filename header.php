@@ -1,11 +1,10 @@
 <?php session_start();?>
-
 <!DOCTYPE html>
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="Register.css">
   <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="test.css">
   <link rel="shortcut icon"type="" href="pic/kemon.png" style="width: 150px;">
   <link rel="stylesheet" href="bootstrap-4.5.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="font-awesome.min.css">
@@ -30,7 +29,7 @@
     <button class="close_nav" onclick="toggleNav()"><img src="material/close@2x.png" alt=""></button><br><br>
     </div>
 
-			<div></div>
+			<div>
 				<img src="pic/kemon.png" alt="" width=100 height=80>
       </div>
       
@@ -43,7 +42,7 @@
 
 					<li><a href="Request.php">Shop</a></li>
 
-          <li><a href="#">Montly Subscription</a>
+          <li><a href="#">Subscription</a>
 
             <ul class="subscription">
               <li><a href="3monthssubscription.php">3 Months for <?php echo $_SESSION['month3'] ?></a></li>
@@ -54,7 +53,15 @@
 
         </li>
 
-					<li><a href="#">Contact us</a></li>
+          <li><a href="#">Contact us</a>
+        
+              <ul class="contact">
+                <li><a href="pic/ft-fb.gif"><img src="pic/ft-fb.gif" alt=""></a></li>
+                <li><a href="pic/ft-in.gif"><img src="pic/ft-fin.gif" alt=""></a></li>
+                <li><a href="pic/ft-twi.gif"><img src="pic/ft-twi.gif" alt=""></a></li>
+              </ul>
+
+        </li>
 
 
 				</ul>
