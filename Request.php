@@ -51,6 +51,10 @@ th, td {
 
 
 
+
+
+
+
 <table style="width:100%">
   <tr>
     <th>Shop Name</th>
@@ -85,6 +89,9 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
   
    
 ?>
+
+
+
   <tr>
     <td><?php echo $shop_name ?> </td>
     <td><?php echo $junction ?> </td>		

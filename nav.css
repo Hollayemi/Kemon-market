@@ -6,8 +6,11 @@
 	position:fixed;
 	background-color: #00b8e6;
 	width:100%;
+	position: fixed;
 	z-index:1;
 }
+
+
 .anchors{
     display:flex;
 	justify-content:space-between;
@@ -23,13 +26,15 @@
 	float: right;
 	display:none;
 }
-
+.logout_btn{
+	border:2px solid #000;
+	width:10px;
+}
 .anchors li a{
 	text-decoration:none;
-	color:#FFF;	
+	color:#FFF;
 	font-weight:bold;
 	line-height:70px;
-
 	font-size:20px;
 	width:100px;
 	padding-left:10px;
@@ -50,10 +55,9 @@
 }
 .anchors li:hover .subscription{
 	display:block;
-	background-color:#05a1c9;
 	position: absolute;
 	transition:top 0.6s ease-in-out;
-	border-radius:10px;
+	border-radius:4px;
 }
 .subscription{
 	transition:top 0.6s ease-in-out;
@@ -63,15 +67,22 @@
 	display:none;
 }
 
+.PaymentsPage{
+	color:red;text-align: center;
+}
 .subscription{
 	
 	transition:top 0.6s ease-in-out;
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1271px){
+	.anchors22{
+		display:none !important;
+	}
 	header{
 		background-color:#00b8e6;
 		border-top: 50px solid #00b8e6;
 		z-index:2;
+		position: fixed;
 	}
 	.anchors li:hover{
 		border-bottom:3px solid #ccc;
@@ -153,6 +164,7 @@
 		background-color:#00b8e6;
 		border-top: 50px solid #00b8e6;
 		z-index:2;
+		position: fixed;
 	}
 	.holla{
 		position:absolute;

@@ -17,7 +17,7 @@ $user_id=$_SESSION['user_info_id'];
 <br><br>
 <h5 style="font-size: medium;">>Dear <?php echo $username?>, you are about to make 2 months subscription for
          <?php echo $shop?> in 
-         <?php echo $city?> which will cost you <?php echo $_SESSION['month2']?></h5>
+         <?php echo $city?> which will cost you <?php echo $_SESSION['month6']?></h5>
 
          <br>
          

@@ -27,7 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		
 		$chk_password=$result['password'];
 		$chk_username=$result['username'];
+
 		$chk_id=$result['id'];
+		$_SESSION['user_info_id'] = $chk_id;
 		$hashedPassword=md5($_POST['Password']);
 		if($chk_password==$hashedPassword && $inputUsername=="Admin"){
 			$chk_username=$result['username'];
